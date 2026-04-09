@@ -1,0 +1,72 @@
+---
+const features = [
+  {
+    icon: '🎙️',
+    title: 'Web-Based Studio',
+    description: 'Access your playout system from any browser. No installed software. Works on any device that supports WebRTC.',
+  },
+  {
+    icon: '🕐',
+    title: 'Precision Timing',
+    description: 'Soft time markers for Core. Hard markers with pitch-correct time compression for Pro. Hit the hour every time.',
+  },
+  {
+    icon: '📡',
+    title: 'Split Playout',
+    description: 'Run FM and streaming simultaneously with independent content — same clock, different breaks. Built for LPFM and hybrid stations.',
+  },
+  {
+    icon: '🎚️',
+    title: 'Cart Wall',
+    description: 'Drag-and-drop cart wall with instant playback. Assign jingles, sweepers, and liners to hotkeys for live assist.',
+  },
+  {
+    icon: '📅',
+    title: 'Smart Scheduler',
+    description: 'Format clocks, sweepers, rules engine, and traffic integration. Build your station clock once and let it run.',
+  },
+  {
+    icon: '🎤',
+    title: 'Remote Studio',
+    description: 'WebRTC-based remote broadcasting. Presenters connect from anywhere with a browser. One slot free, unlimited on Pro.',
+  },
+  {
+    icon: '📊',
+    title: 'Compliance Recording',
+    description: 'Continuous 24/7 recording with automatic archiving. Meets FCC and international compliance requirements.',
+  },
+  {
+    icon: '🔌',
+    title: 'One-Line Install',
+    description: 'Deploy with a single curl command. Docker-based, cross-platform, automatic SSL. Running in minutes.',
+  },
+  {
+    icon: '🎨',
+    title: 'Fully Templateable',
+    description: 'Default light and dark themes included. Build your own template or replicate the look of any playout system.',
+  },
+];
+---
+
+<section id="features" class="py-24 bg-gray-950">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        Everything your station needs
+      </h2>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+        Built by broadcasters, for broadcasters. Orvana combines the best features from every major playout system into one modern, web-based platform.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {features.map((feature) => (
+        <div class="bg-gray-900 border border-white/5 rounded-xl p-6 hover:border-blue-500/30 transition-colors">
+          <div class="text-3xl mb-4">{feature.icon}</div>
+          <h3 class="text-lg font-semibold mb-2">{feature.title}</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">{feature.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
