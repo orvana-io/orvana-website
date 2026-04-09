@@ -1,0 +1,111 @@
+---
+const coreFeatures = [
+  'Full playout engine + cart wall',
+  'Media library with artist/title separation',
+  'Basic scheduler with hourly clock',
+  '1 stream encoder (Icecast/Shoutcast)',
+  'Remote studio (1 WebRTC slot)',
+  'Soft time markers',
+  'Basic recording',
+  'Admin panel',
+  'Up to 3 users',
+  'Default light + dark templates',
+  'Manual upgrades',
+  'Community support',
+];
+
+const proFeatures = [
+  'Everything in Core, plus:',
+  'Split playout with shared clock sync',
+  'Hard time markers + backtiming engine',
+  'Pitch-correct TCE (±4%)',
+  'Voice tracking',
+  'Advanced format clock scheduler',
+  'Traffic & spots management',
+  'Unlimited stream encoders',
+  'Unlimited remote studio slots',
+  'Compliance recording',
+  'Audio processing (EBU R128 / VST)',
+  'AoIP support (Livewire, AES67)',
+  'Unlimited users + SSO',
+  'Advanced templates + layout designer',
+  'REST API + webhooks',
+  'Multi-station support',
+  'Auto-upgrades',
+  'Priority support',
+];
+---
+
+<section id="pricing" class="py-24 bg-gray-900/50">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        Simple, honest pricing
+      </h2>
+      <p class="text-gray-400 text-lg max-w-xl mx-auto">
+        Core is free forever. Pro is $20/month per station — no contracts, cancel anytime.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+      <!-- Core -->
+      <div class="bg-gray-950 border border-white/10 rounded-2xl p-8">
+        <div class="mb-6">
+          <h3 class="text-xl font-bold mb-1">Core</h3>
+          <div class="flex items-baseline gap-1">
+            <span class="text-4xl font-bold">Free</span>
+          </div>
+          <p class="text-gray-400 text-sm mt-2">Forever. No credit card required.</p>
+        </div>
+        <a
+          href="https://docs.orvana.io/installation"
+          class="block text-center bg-white/10 hover:bg-white/15 border border-white/10 text-white font-semibold py-3 rounded-lg transition-colors mb-8"
+        >
+          Install Now
+        </a>
+        <ul class="space-y-3">
+          {coreFeatures.map((feature) => (
+            <li class="flex items-start gap-3 text-sm text-gray-300">
+              <span class="text-green-400 mt-0.5 shrink-0">✓</span>
+              {feature}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Pro -->
+      <div class="bg-blue-600/10 border border-blue-500/30 rounded-2xl p-8 relative">
+        <div class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+          Most Popular
+        </div>
+        <div class="mb-6">
+          <h3 class="text-xl font-bold mb-1">Pro</h3>
+          <div class="flex items-baseline gap-1">
+            <span class="text-4xl font-bold">$20</span>
+            <span class="text-gray-400">/month per station</span>
+          </div>
+          <p class="text-gray-400 text-sm mt-2">Cancel anytime. Instant activation.</p>
+        </div>
+        <a
+          href="#"
+          class="block text-center bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 rounded-lg transition-colors mb-8"
+        >
+          Coming Soon
+        </a>
+        <ul class="space-y-3">
+          {proFeatures.map((feature, i) => (
+            <li class={`flex items-start gap-3 text-sm ${i === 0 ? 'text-blue-400 font-semibold' : 'text-gray-300'}`}>
+              {i !== 0 && <span class="text-blue-400 mt-0.5 shrink-0">✓</span>}
+              {feature}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <!-- Self-hosted note -->
+    <p class="text-center text-gray-500 text-sm mt-10">
+      Orvana runs on your own hardware. Your data stays yours. No cloud lock-in.
+    </p>
+  </div>
+</section>
